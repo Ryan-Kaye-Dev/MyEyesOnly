@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    div.form
+        form(action="/log-in", method="POST")
+            h1.heading Log In
+            label(for="username") Username:
+            input(type="text", id="username", name="username" placeholder="Enter your username")
+
+            label(for="password") Password:
+            input(type="password", id="password", name="password" placeholder="Enter your password")
+
+            button(type="submit") Log In
