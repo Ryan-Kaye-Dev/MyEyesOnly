@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    div.form
+        form(action="/sign-up", method="POST")
+            h1.heading Sign Up
+            label(for="firstName") First Name:
+            input(type="text", id="firstName", name="firstName" placeholder="Enter your first name")
+
+            label(for="lastName") Last Name:
+            input(type="text", id="lastName", name="lastName" placeholder="Enter your last name")
+
+            label(for="username") Username:
+            input(type="text", id="username", name="username" placeholder="Enter your username")
+
+            label(for="password") Password:
+            input(type="password", id="password", name="password" placeholder="Enter your password")
+
+            label(for="confirmPassword") Confirm Password:
+            input(type="password", id="confirmPassword", name="confirmPassword" placeholder="Confirm your password")
+
+            button(type="submit") Sign Up

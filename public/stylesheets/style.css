@@ -1,0 +1,123 @@
+@font-face {
+  font-family: system-ui;
+  font-style: normal;
+  font-weight: 300;
+  src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+}
+* {
+  margin:0;
+  padding:0;
+}
+
+body {
+  font-family: "system-ui";
+  background-color: #161515;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: aquamarine
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #222121;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  margin-right: 20px;
+  font-weight: 600;
+  color: aquamarine;
+}
+
+.title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: rgb(187, 209, 201);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items at the start */
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items at the start */
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #433f3f;
+  color: aquamarine;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: center;
+}
+
+button:hover {
+  background-color: aquamarine;
+  color: #433f3f;
+}
+
+.heading {
+  font-size: 2em;
+  font-weight: 600;
+  color: aquamarine;
+  margin-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 15px;
+  border-bottom: aquamarine 1px solid;
+  align-self: center;
+}
+
+label {
+  font-size: 1em;
+  font-weight: 300;
+  color: aquamarine;
+  margin-top: 20px;
+  padding-bottom: 15px;
+}
+
+input {
+  padding: 6px;
+  border-radius: 5px;
+  border: none;
+  background-color: #433f3f;
+  color: aquamarine;
+  font-weight: 300;
+  border: rgba(255, 255, 255, 0.67) 1px solid;
+  min-width: 300px;
+}
