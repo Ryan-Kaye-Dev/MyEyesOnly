@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    div.form
+        form(action="/new-message", method="POST")
+            h1.heading New Message
+            label(for="username") Title:
+            input(type="text", id="title", name="title" placeholder="Enter a title")
+
+            label(for="password") Message:
+            input(type="text", id="text", name="text" placeholder="Enter your message")
+
+            button(type="submit") Send It!
