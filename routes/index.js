@@ -2,6 +2,7 @@ var express = require("express");
 var router = express.Router();
 const signupController = require("../controllers/signupController");
 const loginController = require("../controllers/loginController");
+const secretController = require("../controllers/secretController");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -21,5 +22,11 @@ router.get("/log-in", loginController.login_get);
 
 //POST Login page
 router.post("/log-in", loginController.login_post);
+
+//GET Secret page
+router.get("/secret", secretController.secret_get);
+
+//POST Secret page
+router.post("/secret", secretController.secret_post);
 
 module.exports = router;

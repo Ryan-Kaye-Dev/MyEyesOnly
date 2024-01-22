@@ -32,7 +32,7 @@ To ensure a positive and respectful community, please adhere to the following gu
 
 ## Support
 
-If you encounter any issues or have any questions, please reach out to me on discord, **Bisto.js**.
+If you encounter any issues or have any questions, please reach out to me on discord, '**Bisto.js**'.
 
 ## Conclusion
 
