@@ -47,6 +47,13 @@ app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, "public")));
 
+// Check if User is authenticated
+app.use(function (req, res, next) {
+  res.locals.isAuthenticated = req.isAuthenticated();
+  res.locals.user = req.user;
+  next();
+});
+
 app.use("/", indexRouter);
 app.use("/public", express.static(path.join(__dirname, "public")));
 

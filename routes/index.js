@@ -3,6 +3,7 @@ var router = express.Router();
 const signupController = require("../controllers/signupController");
 const loginController = require("../controllers/loginController");
 const secretController = require("../controllers/secretController");
+const newMessageController = require("../controllers/newMessageController");
 
 /* GET home page. */
 router.get("/", function (req, res, next) {
@@ -28,5 +29,11 @@ router.get("/secret", secretController.secret_get);
 
 //POST Secret page
 router.post("/secret", secretController.secret_post);
+
+//GET New Message page
+router.get("/new-message", newMessageController.new_message_get);
+
+//POST New Message page
+router.post("/new-message", newMessageController.new_message_post);
 
 module.exports = router;

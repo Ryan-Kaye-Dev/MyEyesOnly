@@ -9,10 +9,20 @@ html
       ul
         li
           a(href='/') Messages
-        li
-          a(href='/sign-up') Sign Up
-        li
-          a(href='/log-in') Log In
+        if isAuthenticated
+          li 
+            a(href='/new-message') New Message
+          li
+            a(href='/profile') Profile
+          li
+            a(href='/secret') Secret
+          li 
+            a(href='/') Log Out
+        else
+          li
+            a(href='/sign-up') Sign Up
+          li
+            a(href='/log-in') Log In
     block content
   footer
     p Bisto.js
