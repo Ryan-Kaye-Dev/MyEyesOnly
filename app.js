@@ -79,7 +79,6 @@ app.use(function (req, res, next) {
 });
 
 app.use("/", indexRouter);
-app.use("/public", express.static(path.join(__dirname, "public")));
 
 // Passport.js local strategy
 passport.use(
