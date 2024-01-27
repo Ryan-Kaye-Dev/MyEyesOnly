@@ -4,10 +4,18 @@ const signupController = require("../controllers/signupController");
 const loginController = require("../controllers/loginController");
 const secretController = require("../controllers/secretController");
 const newMessageController = require("../controllers/newMessageController");
+const logoutController = require("../controllers/logoutController");
+
+const Message = require("../models/message");
 
 /* GET home page. */
-router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+router.get("/", async function (req, res, next) {
+  const messages = await Message.find({})
+    .sort({ timestamp: -1 }) // Sort messages from newest to oldest
+    .limit(20) // Only return 20 messages
+    .populate("user"); // Replace the user ID stored in the user field with a full user object
+
+  res.render("index", { title: "Messages", messages: messages });
 });
 
 //GET Sign Up page
@@ -35,5 +43,14 @@ router.get("/new-message", newMessageController.new_message_get);
 
 //POST New Message page
 router.post("/new-message", newMessageController.new_message_post);
+
+//GET Logout page
+router.get("/log-out", logoutController.logout_get);
+
+//GET Delete Message page
+router.get("/message/:id/delete", newMessageController.message_delete_get);
+
+//POST Delete Message page
+router.post("/message/:id/delete", newMessageController.message_delete_post);
 
 module.exports = router;

@@ -1,5 +1,19 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .message-container 
+    each message in messages
+      .message-card
+        h2=message.title
+        div.message-details
+          p.text=message.text
+          div.message-detail
+            if isInClub || isAdmin
+              p Posted by: #{message.user.username}
+              p #{message.shortDate}
+            else
+              p Posted by: Anonymous
+              p #{message.shortDate}
+        if isAdmin
+            a.button(href=message.url+'/delete') Delete
+

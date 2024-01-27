@@ -18,8 +18,9 @@ li {
   list-style-type: none;
 }
 
-a {
+a, p {
   text-decoration: none;
+  color: aquamarine;
 }
 
 a:visited {
@@ -79,7 +80,7 @@ form {
 
 }
 
-button {
+button, .button {
   margin-top: 20px;
   padding: 10px 50px 10px 50px;
   border-radius: 5px;
@@ -91,7 +92,7 @@ button {
   align-self: center;
 }
 
-button:hover {
+button:hover, .button:hover {
   background-color: aquamarine;
   color: #433f3f;
 }
@@ -101,6 +102,7 @@ button:hover {
   font-weight: 600;
   color: aquamarine;
   margin-top: 20px;
+  margin-bottom: 10px;
   padding-left: 50px;
   padding-right: 50px;
   padding-bottom: 15px;
@@ -116,7 +118,7 @@ label {
   padding-bottom: 15px;
 }
 
-input {
+input, textarea {
   padding: 6px;
   border-radius: 5px;
   border: none;
@@ -152,4 +154,68 @@ footer img {
   height: 30px;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.message-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Align items at the start */
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.message-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  background-color: #222121;
+  color: aquamarine;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px;
+  min-width: 400px;
+  border: rgba(255, 255, 255, 0.67) 1px solid;
+
+}
+
+.message-card p {
+  font-size: 1em;
+  font-weight: 300;
+  color: aquamarine;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  align-self: center;
+}
+
+.message-card h2 {
+  font-size: 1.8em;
+  font-weight: 600;
+  color: aquamarine;
+  padding-bottom: 15px;
+  align-self: center;
+  border-bottom: aquamarine 1px solid;
+}
+
+.message-details {
+align-self:flex-start;
+flex-direction: column;
+flex-grow: 1;
+}
+
+.message-card p.text {
+  font-size: 1em;
+  font-weight: 300;
+  color: aquamarine;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  align-self: center;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-all;
+  hyphens: auto;
 }

@@ -10,7 +10,7 @@ exports.login_get = function (req, res, next) {
 //POST Login page
 exports.login_post = [
   passport.authenticate("local", {
-    successRedirect: "/secret", // Redirect to the secret page if there is no error
+    successRedirect: "/", // Redirect to the secret page if there is no error
     failureRedirect: "/log-in", // Redirect back to login page if there is an error
     failureFlash: false,
   }),

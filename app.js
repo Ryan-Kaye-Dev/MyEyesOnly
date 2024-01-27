@@ -54,6 +54,30 @@ app.use(function (req, res, next) {
   next();
 });
 
+// Check if user is admin
+app.use(function (req, res, next) {
+  if (req.user) {
+    if (req.user.membershipStatus === "Admin") {
+      res.locals.isAdmin = true;
+    } else {
+      res.locals.isAdmin = false;
+    }
+  }
+  next();
+});
+
+// Check if user is part of the club
+app.use(function (req, res, next) {
+  if (req.user) {
+    if (req.user.membershipStatus === "Club") {
+      res.locals.isInClub = true;
+    } else {
+      res.locals.isInClub = false;
+    }
+  }
+  next();
+});
+
 app.use("/", indexRouter);
 app.use("/public", express.static(path.join(__dirname, "public")));
 
